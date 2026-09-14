@@ -31,7 +31,7 @@
 
   <rect x="80" y="278" width="280" height="50" rx="4" fill="none" stroke="#BFE6F5" stroke-dasharray="4 3"/>
   <text x="220" y="299" text-anchor="middle" font-size="13" fill="#BFE6F5">Subnet pública</text>
-  <text x="220" y="315" text-anchor="middle" font-size="11" fill="#BFE6F5" opacity="0.75">multi-AZ &middot; NAT / IGW</text>
+  <text x="220" y="315" text-anchor="middle" font-size="11" fill="#BFE6F5" opacity="0.75">multi-AZ · NAT / IGW</text>
 
   <rect x="480" y="278" width="360" height="180" rx="4" fill="none" stroke="#BFE6F5"/>
   <text x="660" y="299" text-anchor="middle" font-size="13" fill="#BFE6F5">Subnet privada (multi-AZ)</text>
