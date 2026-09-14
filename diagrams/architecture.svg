@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 660" role="img" aria-label="Tráfego da internet passa por Security Groups e NACLs, entra no Application Load Balancer, é distribuído entre subnet pública e subnet privada multi-AZ, chega aos pods do EKS na subnet privada, e de lá se conecta a RDS, S3 e DynamoDB. Separadamente, o Transit Gateway liga a VPC a um hub compartilhado com outras VPCs e ambientes on-premises — a única rota que cruza a fronteira da VPC.">
+  <rect x="0" y="0" width="920" height="660" fill="#0B3855"/>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#BFE6F5"/>
+    </marker>
+    <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" style="fill:#F0A93B"/>
+    </marker>
+  </defs>
+
+  <rect x="380" y="20" width="160" height="46" rx="4" fill="none" stroke="#BFE6F5"/>
+  <text x="460" y="48" text-anchor="middle" font-size="13" fill="#BFE6F5">Internet</text>
+
+  <line x1="460" y1="66" x2="460" y2="100" stroke="#BFE6F5" marker-end="url(#arrow)"/>
+  <text x="470" y="88" font-size="11" fill="#BFE6F5" opacity="0.85">tráfego público</text>
+
+  <rect x="290" y="100" width="340" height="52" rx="4" fill="none" stroke="#BFE6F5"/>
+  <text x="460" y="122" text-anchor="middle" font-size="13" fill="#BFE6F5">Security Groups + NACLs</text>
+  <text x="460" y="139" text-anchor="middle" font-size="11" fill="#BFE6F5" opacity="0.75">camada de firewall</text>
+
+  <line x1="460" y1="152" x2="460" y2="182" stroke="#BFE6F5" marker-end="url(#arrow)"/>
+
+  <rect x="320" y="182" width="280" height="50" rx="4" fill="none" stroke="#BFE6F5"/>
+  <text x="460" y="204" text-anchor="middle" font-size="13" fill="#BFE6F5">Application Load Balancer</text>
+  <text x="460" y="220" text-anchor="middle" font-size="11" fill="#BFE6F5" opacity="0.75">multi-AZ</text>
+
+  <line x1="460" y1="232" x2="460" y2="254" stroke="#BFE6F5"/>
+  <line x1="460" y1="254" x2="220" y2="276" stroke="#BFE6F5" marker-end="url(#arrow)"/>
+  <line x1="460" y1="254" x2="620" y2="276" stroke="#BFE6F5" marker-end="url(#arrow)"/>
+
+  <rect x="80" y="278" width="280" height="50" rx="4" fill="none" stroke="#BFE6F5" stroke-dasharray="4 3"/>
+  <text x="220" y="299" text-anchor="middle" font-size="13" fill="#BFE6F5">Subnet pública</text>
+  <text x="220" y="315" text-anchor="middle" font-size="11" fill="#BFE6F5" opacity="0.75">multi-AZ &middot; NAT / IGW</text>
+
+  <rect x="480" y="278" width="360" height="180" rx="4" fill="none" stroke="#BFE6F5"/>
+  <text x="660" y="299" text-anchor="middle" font-size="13" fill="#BFE6F5">Subnet privada (multi-AZ)</text>
+
+  <rect x="520" y="316" width="280" height="52" rx="4" fill="none" stroke="#BFE6F5"/>
+  <text x="660" y="338" text-anchor="middle" font-size="13" fill="#BFE6F5">EKS — node group</text>
+  <text x="660" y="354" text-anchor="middle" font-size="11" fill="#BFE6F5" opacity="0.75">pods da aplicação</text>
+
+  <line x1="660" y1="368" x2="660" y2="392" stroke="#BFE6F5" marker-end="url(#arrow)"/>
+  <text x="670" y="386" font-size="11" fill="#BFE6F5" opacity="0.85">leitura/escrita</text>
+
+  <line x1="580" y1="368" x2="360" y2="470" stroke="#BFE6F5" marker-end="url(#arrow)"/>
+  <text x="380" y="440" font-size="11" fill="#BFE6F5" opacity="0.85">assets estáticos</text>
+
+  <line x1="740" y1="368" x2="820" y2="470" stroke="#BFE6F5" marker-end="url(#arrow)"/>
+  <text x="742" y="440" font-size="11" fill="#BFE6F5" opacity="0.85">sessões/estado</text>
+
+  <rect x="560" y="392" width="200" height="52" rx="4" fill="none" stroke="#BFE6F5"/>
+  <text x="660" y="414" text-anchor="middle" font-size="13" fill="#BFE6F5">RDS (PostgreSQL)</text>
+  <text x="660" y="430" text-anchor="middle" font-size="11" fill="#BFE6F5" opacity="0.75">multi-AZ</text>
+
+  <rect x="230" y="474" width="180" height="50" rx="4" fill="none" stroke="#BFE6F5"/>
+  <text x="320" y="495" text-anchor="middle" font-size="13" fill="#BFE6F5">S3</text>
+  <text x="320" y="511" text-anchor="middle" font-size="11" fill="#BFE6F5" opacity="0.75">assets / backups</text>
+
+  <rect x="730" y="474" width="180" height="50" rx="4" fill="none" stroke="#BFE6F5"/>
+  <text x="820" y="495" text-anchor="middle" font-size="13" fill="#BFE6F5">DynamoDB</text>
+  <text x="820" y="511" text-anchor="middle" font-size="11" fill="#BFE6F5" opacity="0.75">chave-valor</text>
+
+  <path d="M 80,303 L 40,303 L 40,590 L 220,590" fill="none" stroke="#BFE6F5" stroke-dasharray="4 3"/>
+
+  <rect x="80" y="566" width="200" height="50" rx="4" fill="none" style="stroke:#F0A93B" stroke-width="2"/>
+  <text x="180" y="587" text-anchor="middle" font-size="13" style="fill:#F0A93B">Transit Gateway</text>
+  <text x="180" y="603" text-anchor="middle" font-size="11" style="fill:#F0A93B" opacity="0.85">anexado à VPC</text>
+
+  <line x1="280" y1="591" x2="600" y2="591" style="stroke:#F0A93B" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <text x="330" y="583" font-size="11" style="fill:#F0A93B">rota compartilhada entre VPCs</text>
+
+  <rect x="600" y="566" width="260" height="50" rx="4" fill="none" style="stroke:#F0A93B" stroke-width="2"/>
+  <text x="730" y="587" text-anchor="middle" font-size="13" style="fill:#F0A93B">Hub / outras VPCs</text>
+  <text x="730" y="603" text-anchor="middle" font-size="11" style="fill:#F0A93B" opacity="0.85">e ambientes on-premises</text>
+</svg>
