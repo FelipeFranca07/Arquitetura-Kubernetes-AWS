@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 660" role="img" aria-label="Tráfego da internet passa por Security Groups e NACLs, entra no Application Load Balancer, é distribuído entre subnet pública e subnet privada multi-AZ, chega aos pods do EKS na subnet privada, e de lá se conecta a RDS, S3 e DynamoDB. Separadamente, o Transit Gateway liga a VPC a um hub compartilhado com outras VPCs e ambientes on-premises — a única rota que cruza a fronteira da VPC.">
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="660" viewBox="0 0 920 660" role="img" aria-label="Tráfego da internet passa por Security Groups e NACLs, entra no Application Load Balancer, é distribuído entre subnet pública e subnet privada multi-AZ, chega aos pods do EKS na subnet privada, e de lá se conecta a RDS, S3 e DynamoDB. Separadamente, o Transit Gateway liga a VPC a um hub compartilhado com outras VPCs e ambientes on-premises — a única rota que cruza a fronteira da VPC.">
   <rect x="0" y="0" width="920" height="660" fill="#0B3855"/>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
