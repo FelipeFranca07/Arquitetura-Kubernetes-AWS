@@ -141,3 +141,4 @@ Sessões e estado de baixa latência, fora do banco relacional, com escala sob d
 **Ordem de criação:** VPC → subnets/NAT → security groups/NACL → load balancer → Transit Gateway → EKS → RDS → S3 → DynamoDB. Cada etapa depende de recursos criados na anterior (ex: o Target Group do ALB só existe depois da VPC; o node group do EKS só depois do cluster).
 
 Os menus e assistentes do Console da AWS mudam de tempos em tempos — o nome exato de um botão pode ter se movido desde a escrita deste guia, mas a sequência e a lógica de dependência entre os recursos continuam válidas.
+
